@@ -23,7 +23,7 @@ function getCompChoice() {
 }
 
 function getHumanChoice(){
-    let userChoice = prompt("Rock, Paper or Scissors? **You must capitalize first letter**");
+    let userChoice = prompt("Rock, Paper or Scissors?");
     if (userChoice == null) {
         console.log("You gave up!")
     } else if (userChoice == "") {
@@ -32,14 +32,17 @@ function getHumanChoice(){
     return userChoice.toLowerCase();
 }
 
-// let humanScore = 0;
-// let computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
-// function playRound(humanChoice, computerChoice) {
-//     humanChoice = getHumanChoice();
-//     computerChoice = getCompChoice(1,3);
+function playRound(humanChoice, computerChoice) {
+    humanChoice = getHumanChoice;
+    computerChoice = getCompChoice;
+    return humanChoice() + computerChoice();
+}
 
-// }
+let result = playRound();
+console.log(result);
 
 // const humanSelection = getHumanChoice();
 // const computerSelection = getCompChoice();
