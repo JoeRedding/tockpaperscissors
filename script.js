@@ -69,8 +69,14 @@ function playGame() {
             computerScore++;
         } else {
         }
-        
-        console.log(result + "Computer: " + computerScore + ". Human: " + humanScore);
+        console.log(result + " Computer: " + computerScore + ". Human: " + humanScore);
+        if (counter == 5 && computerScore > humanScore) {
+            console.log("Computer Wins the game!" + " Computer: " + computerScore + ". Human: " + humanScore);
+            } else if (counter == 5 && humanScore > computerScore) {
+            console.log("Human Wins the game!" + " Computer: " + computerScore + ". Human: " + humanScore);
+            } else if (counter == 5 && humanScore == computerScore) {
+            console.log("Draw! Nobody wins." + " Computer: " + computerScore + ". Human: " + humanScore);
+        }
     }
 }
 
